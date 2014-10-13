@@ -22,11 +22,6 @@ The design philosophy behind rCharts is to make the process of creating, customi
 ```coffee
 require(rMapskr)
 
-
-#### [Leaflet](http://leafletjs.com/)
-
-
-
 map3 <- Leaflet$new()
 map3$setView(c(51.505, -0.09), zoom = 13)
 map3$marker(c(51.5, -0.09), bindPopup = "<p> Hi. I am a popup </p>")
