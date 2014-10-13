@@ -1,0 +1,14 @@
+leaflet:
+  css: [external/leaflet.css, external/leaflet-rCharts.css, external/legend.css]
+  jshead:
+    - external/leaflet-src.js
+    - lib/proj4-compressed.js
+    - lib/proj4leaflet.js
+    - src/Leaflet.KoreanTmsProviders.js
+  
+  cdn:
+    css: //cdn.leafletjs.com/leaflet-0.7.3/leaflet.css
+    jshead: 
+      - //cdn.leafletjs.com/leaflet-0.7.3/leaflet-src.js
+      - //rawgithub.com/leaflet-extras/leaflet-providers/gh-pages/leaflet-providers.js
+      - "//harrywood.co.uk/maps/examples/leaflet/leaflet-plugins/layer/vector/KML.js"
