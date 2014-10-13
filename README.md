@@ -12,13 +12,10 @@ require(devtools)
 install_github('dongikjang/rMapskr')
 ```
 
-## Features
-
-The design philosophy behind rCharts is to make the process of creating, customizing and sharing interactive visualizations easy. 
 
 ### Create
 
-`rCharts` uses a formula interface to specify plots, just like the `lattice` package. Here are a few examples you can try out in your R console.
+`rMapskr` uses a formula interface to specify plots, just like the `lattice` package. Here are a few examples you can try out in your R console.
 
 ```coffee
 require(rMapskr)
