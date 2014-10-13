@@ -1,0 +1,32 @@
+Package: rMapskr
+Type: Package
+Title: Interactive South Korea Maps using Leaflet Library
+Version: 0.4.5
+Date: 2014-10-13
+Authors@R: c(
+  person("Dongik", "Jang", email = "dongik.s.jang@gmail.com", 
+    role = c("aut", "cre")
+  ))
+Maintainer: RDongik Jang <dongik.s.jang@gmail.com>
+Description: Create interactive maps with a plotting interface
+    familiar to R users using Leaflet library.
+Imports:
+    rCharts,
+    plyr,
+    lattice,
+    RCurl,
+    RJSONIO,
+    whisker,
+    yaml
+License: MIT
+Collate:
+    'utils.R'
+    'utils-rickshaw.R'
+    'rMapskrClass.R'
+    'toJSON.R'
+    'renderChart.R'
+    'showOutput.R'
+    'gist.R'
+    'publish.R'
+    'Leaflet.R'
+    'makeExamples.R'
