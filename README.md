@@ -20,10 +20,10 @@ install_github('dongikjang/rMapskr')
 ```coffee
 require(rMapskr)
 
-map3 <- Leaflet$new()
-map3$setView(c(51.505, -0.09), zoom = 13)
-map3$marker(c(51.5, -0.09), bindPopup = "<p> Hi. I am a popup </p>")
-map3$marker(c(51.495, -0.083), bindPopup = "<p> Hi. I am another popup </p>")
+map3 <- Leaflet$new("daum")
+#map3$setView(c(37.56641861115186, 126.97787362769193), zoom = 11)
+map3$marker(c(37.5545355, 126.9706773), bindPopup = "<p> Seoul Station </p>")
+map3$marker(c(37.5666208, 126.9783823), bindPopup = "<p> City Hall of Seoul </p>")
 map3
 ```
 
