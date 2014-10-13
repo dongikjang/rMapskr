@@ -74,7 +74,7 @@ rMapskr = setRefClass('rMapskr', list(params = 'list', lib = 'character',
       if(krmap[1] == "naver"){
       	script =  file.path(LIB$url, 'layouts', 'chartnaver.html')
     } else if(krmap[1] == "vworld"){
-      	script =  file.path(LIB$url, 'layouts', 'chartvwrold.html')
+      	script =  file.path(LIB$url, 'layouts', 'chartvworld.html')
     } else {
       	script =  file.path(LIB$url, 'layouts', 'chartdaum.html')
     }
