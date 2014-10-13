@@ -25,7 +25,7 @@ require(rMapskr)
 
 #### [Leaflet](http://leafletjs.com/)
 
-```coffee
+
 
 map3 <- Leaflet$new()
 map3$setView(c(51.505, -0.09), zoom = 13)
