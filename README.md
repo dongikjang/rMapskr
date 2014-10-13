@@ -1,6 +1,7 @@
 # rMapskr
 
-rMapskr is an R package to create, customize and publish interactive South Korea maps(Daum Map, Naver Map and VWorld Map) visualizations from R using a familiar lattice style plotting interface.
+rMapskr is an R package to create, customize and publish interactive South Korea maps(Daum Map, Naver Map and VWorld Map) visualizations from R using a familiar lattice style plotting interface. rMapsks is modification version  of package rCharts.  
+This package is under developement. 
 
 ## Installation
 
