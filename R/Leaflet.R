@@ -114,8 +114,12 @@ Leaflet = setRefClass('Leaflet', contains = 'rMapskr', methods = list(
     circle = toChain(params$circle, obj = 'L')
 
     toJSONcrs <- function(params, ...){
-      params$center <<- c(37.566429, 126.977997)
-      params$zoom <<- 10
+      if(is.null(params$center)){
+      	params$center <<- c(37.566429, 126.977997)
+      }
+      if(is.null(params$zoom)){
+      	params$zoom <<- 10
+      }
       x <- RJSONIO:::toJSON(params, ...)
       ind <- regexpr("\"crs\":", x)
       if(ind[1] >= 0){
