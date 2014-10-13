@@ -4,6 +4,7 @@ leaflet:
     - external/leaflet-src.js
     - lib/proj4-compressed.js
     - lib/proj4leaflet.js
+    - lib/leaflet-providers.js
     - src/Leaflet.KoreanTmsProviders.js
   
   cdn:
