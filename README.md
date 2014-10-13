@@ -13,9 +13,11 @@ install_github('dongikjang/rMapskr')
 ```
 
 
-### Create
+## Create
 
 `rMapskr` uses a formula interface to specify plots, just like the `lattice` package. Here are a few examples you can try out in your R console.
+
+### Daum Map
 
 ```coffee
 require(rMapskr)
@@ -26,6 +28,34 @@ map3$marker(c(37.5545355, 126.9706773), bindPopup = "<p> Seoul Station </p>")
 map3$marker(c(37.5666208, 126.9783823), bindPopup = "<p> City Hall of Seoul </p>")
 map3
 ```
+
+### Naver Map
+
+```coffee
+require(rMapskr)
+
+map3 <- Leaflet$new("naver")
+#map3$setView(c(37.56641861115186, 126.97787362769193), zoom = 11)
+map3$marker(c(37.5545355, 126.9706773), bindPopup = "<p> Seoul Station </p>")
+map3$marker(c(37.5666208, 126.9783823), bindPopup = "<p> City Hall of Seoul </p>")
+map3
+```
+
+
+### Vworld Map
+
+```coffee
+require(rMapskr)
+
+map3 <- Leaflet$new("vworld")
+#map3$setView(c(37.56641861115186, 126.97787362769193), zoom = 11)
+map3$marker(c(37.5545355, 126.9706773), bindPopup = "<p> Seoul Station </p>")
+map3$marker(c(37.5666208, 126.9783823), bindPopup = "<p> City Hall of Seoul </p>")
+map3
+```
+
+
+
 
 ![leaflet](screenshots/leaflet.png)
 
