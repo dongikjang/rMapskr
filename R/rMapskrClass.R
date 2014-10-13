@@ -22,21 +22,21 @@ rMapskr = setRefClass('rMapskr', list(params = 'list', lib = 'character',
     #templates <<- list(page = 'rChart.html', chartDiv = NULL, afterScript = "<script></script>",
     #script =  file.path(LIB$url, 'layouts', 'chartnaver.html'))
     if(krmap[1] == "naver"){
-	templates <<- list(page = 'rChart.html', chartDiv = NULL, afterScript = "<script></script>",
+	templates <<- list(page = 'rMapskr.html', chartDiv = NULL, afterScript = "<script></script>",
       			   script =  file.path(LIB$url, 'layouts', 'chartnaver.html'))
 	params$mapOpts <<- list(crs = "L.Proj.CRS.TMS.Naver",
 				worldCopyJump = FALSE, 
 		                continuousWorld = TRUE,
 		                zoomControl = TRUE)
     } else if(krmap[1] == "vworld"){
-	templates <<- list(page = 'rChart.html', chartDiv = NULL, afterScript = "<script></script>",
+	templates <<- list(page = 'rMapskr.html', chartDiv = NULL, afterScript = "<script></script>",
       			   script =  file.path(LIB$url, 'layouts', 'chartvworld.html'))
 	params$mapOpts <<- list(crs = "L.Proj.CRS.TMS.VWorld",
 			        worldCopyJump = FALSE, 
                                 continuousWorld = TRUE,
                                 zoomControl = TRUE)
     } else {
-	templates <<- list(page = 'rChart.html', chartDiv = NULL, afterScript = "<script></script>",
+	templates <<- list(page = 'rMapskr.html', chartDiv = NULL, afterScript = "<script></script>",
       			   script =  file.path(LIB$url, 'layouts', 'chartdaum.html'))
 	params$mapOpts <<- list(crs = "L.Proj.CRS.TMS.Daum",
 			        worldCopyJump = FALSE, 
@@ -68,7 +68,7 @@ rMapskr = setRefClass('rMapskr', list(params = 'list', lib = 'character',
   setLib = function(lib, ...){
     lib <<- lib; LIB <<- get_lib(lib)
     templates <<- modifyList(list(
-      page = 'rChart.html', 
+      page = 'rMapskr.html', 
       chartDiv = "<{{container}} id = '{{ chartId }}' class = 'rChart {{ lib }}'></{{ container}}>", 
       #script =  file.path(LIB$url, 'layouts', 'chart.html')
       if(krmap[1] == "naver"){
