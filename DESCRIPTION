@@ -1,7 +1,7 @@
 Package: rMapskr
 Type: Package
 Title: Interactive South Korea Maps using Leaflet Library
-Version: 0.4.5
+Version: 0.0.1
 Date: 2014-10-13
 Authors@R: c(
   person("Dongik", "Jang", email = "dongik.s.jang@gmail.com", 
