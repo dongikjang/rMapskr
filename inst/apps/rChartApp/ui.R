@@ -1,6 +1,6 @@
 require(rCharts)
 shinyUI(pageWithSidebar(
-  headerPanel("rCharts: Interactive Charts from R using polychart.js"),
+  headerPanel("rMapskr: Interactive Maps from R using polychart.js"),
   
   sidebarPanel(
     selectInput(inputId = "x",

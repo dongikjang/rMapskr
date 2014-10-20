@@ -16,10 +16,10 @@ rMapskr = setRefClass('rMapskr', list(params = 'list', lib = 'character',
     
     params <<- list(
       dom = basename(tempfile('chart')),       # id of dom element of chart
-      width = getOption('RCHART_WIDTH', 1000),  # width of the container
-      height = getOption('RCHART_HEIGHT', 800) # height of the container
+      width = getOption('RMAPSKR_WIDTH', 1000),  # width of the container
+      height = getOption('RMAPSKR_HEIGHT', 800) # height of the container
     )
-    #templates <<- list(page = 'rChart.html', chartDiv = NULL, afterScript = "<script></script>",
+    #templates <<- list(page = 'rMapskr.html', chartDiv = NULL, afterScript = "<script></script>",
     #script =  file.path(LIB$url, 'layouts', 'chartnaver.html'))
     if(krmap[1] == "naver"){
 	    templates <<- list(page = 'rMapskr.html', chartDiv = NULL, afterScript = "<script></script>",
@@ -118,7 +118,7 @@ rMapskr = setRefClass('rMapskr', list(params = 'list', lib = 'character',
   },
   render = function(chartId = NULL, cdn = F, static = T, standalone = F){
     params$dom <<- chartId %||% params$dom
-    template = read_template(getOption('RCHART_TEMPLATE', templates$page))
+    template = read_template(getOption('RMAPSKR_TEMPLATE', templates$page))
     assets = Map("c", 
       get_assets(LIB, static = static, cdn = cdn, standalone = standalone), 
       html_assets
@@ -162,7 +162,7 @@ rMapskr = setRefClass('rMapskr', list(params = 'list', lib = 'character',
       server = {
         shiny_copy = .self$copy()
         shiny_copy$params$dom = 'show'
-        assign(".rChart_object", shiny_copy, envir = .GlobalEnv)
+        assign(".rMapskr_object", shiny_copy, envir = .GlobalEnv)
         if (packageVersion('shiny') > 0.7) {
           brwsr <- getOption('viewer', interactive())
         } else {
@@ -183,7 +183,7 @@ rMapskr = setRefClass('rMapskr', list(params = 'list', lib = 'character',
         if (!file.exists(dirname(file_))){
           dir.create(dirname(file_))
         }
-        cdn = !(chunk_opts_$rcharts %?=% 'draft')
+        cdn = !(chunk_opts_$rmapskr %?=% 'draft')
         .self$save(file_, cdn = cdn)
         cat(c(
           "<iframe src='", file_, 
@@ -238,16 +238,16 @@ rMapskr = setRefClass('rMapskr', list(params = 'list', lib = 'character',
 add_ext_widgets <- function(lib){
   libpath = paste('libraries', lib, sep = "/")
   if (exists('.SLIDIFY_ENV') && 
-      !(libpath %in% .SLIDIFY_ENV$ext_widgets$rCharts)){
-    rcharts_widgets = .SLIDIFY_ENV$ext_widgets$rCharts
-    len = length(rcharts_widgets)
-    .SLIDIFY_ENV$ext_widgets$rCharts[[len + 1]] <<- libpath
+      !(libpath %in% .SLIDIFY_ENV$ext_widgets$rMapkskr)){
+    rmapskr_widgets = .SLIDIFY_ENV$ext_widgets$rMapskr
+    len = length(rmapskr_widgets)
+    .SLIDIFY_ENV$ext_widgets$rMapskr[[len + 1]] <<- libpath
   }
 }
 
 getMode = function(mode_){
   default = ifelse(getOption('knitr.in.progress') %?=% TRUE, 'iframe', 'static')
-  mode_ = mode_ %||% getOption('rcharts.mode') %||% default
+  mode_ = mode_ %||% getOption('rmapskr.mode') %||% default
   return(mode_)
 }
 

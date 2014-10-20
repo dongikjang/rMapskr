@@ -1,13 +1,14 @@
 require(shiny)
 require(rCharts)
+require(rMapskr)
 # addResourcePath('assets', system.file('shiny', 'assets', package = 'knitr'))
 
 
 libs = c('polycharts', 'nvd3', 'morris', 'xcharts')
 foo <- function(libs){
-  require(rCharts)
-  add_rCharts(libs)
-  tagList(lapply(libs, get_rCharts_assets))
+  require(rMapskr)
+  add_rMapskr(libs)
+  tagList(lapply(libs, get_rMapskr_assets))
 }
 
 # libs = 'vega'
@@ -17,8 +18,8 @@ foo <- function(libs){
 
 
 rmdFile <- getOption('NOTEBOOK_TO_OPEN', 'www/example.Rmd')
-libs = c('polycharts', 'nvd3', 'morris', 'xcharts', 'highcharts', 'rickshaw', 'leaflet')
-add_rCharts(libs)
+libs = c('leaflet')
+add_rMapskr(libs)
 
 
 # div nbSrc takes source code from div notebook (via Ace editor), and div nbOut

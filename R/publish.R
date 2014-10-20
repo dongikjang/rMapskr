@@ -19,11 +19,11 @@ publish_.rpubs <- function(files, description, id, ...){
   return(url$id)
 }
 
-#' Run an rCharts example from a github repo
+#' Run an rMapskrs example from a github repo
 #' 
 # runExample(
 #    username = 'timelyportfolio', 
-#    repo = 'rCharts_polycharts_standalone', 
+#    repo = 'rMapskrs_polycharts_standalone', 
 #   filename = 'bar_athletes.R'
 # )
 viewExample <- function(repo, username, ref = 'master', filename){

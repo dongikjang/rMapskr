@@ -24,7 +24,7 @@ Collate:
     'utils-rickshaw.R'
     'rMapskrClass.R'
     'toJSON.R'
-    'renderChart.R'
+    'renderMapskr.R'
     'showOutput.R'
     'gist.R'
     'publish.R'

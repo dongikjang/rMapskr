@@ -1,4 +1,4 @@
-#' Use rCharts as Shiny output. First, use \code{renderChart} in \code{server.R} to assign 
+#' Use rMapskr as Shiny output. First, use \code{renderMapskr} in \code{server.R} to assign 
 #' the chart object to an Shiny output. Then create an chartOutput with the same name in #'
 #' \code{ui.R}. \code{chartOutput} is currently just an alias for \code{htmlOutput}. 
 #' 
@@ -11,8 +11,8 @@ chartOutput <- showOutput <- function(outputId, lib = NULL, package = 'rMapskr',
     add_lib = TRUE){
   if (!is.null(lib)){
     LIB <- get_lib(lib, package = package)
-  } else if (exists(".rChart_object")) {
-    LIB <- .rChart_object$LIB
+  } else if (exists(".rMapskr_object")) {
+    LIB <- .rMapskr_object$LIB
   }
   if (add_lib){
     suppressMessages(singleton(addResourcePath(LIB$name, LIB$url)))

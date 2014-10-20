@@ -139,7 +139,7 @@ fixData = function(d){
 #' Function to create Rickshaw plots
 riPlot <- function(x, y, data, type, ..., xAxis = list(type = 'Time'), 
                    yAxis = list(orientation = 'left')){
-  options(RCHART_TEMPLATE = 'Rickshaw.html')
+  options(RMAPSKR_TEMPLATE = 'Rickshaw.html')
   r1 <- Rickshaw$new()
   r1$layer(x = x, y = y, data = data, type = type, ...)
   do.call(r1$xAxis, xAxis)

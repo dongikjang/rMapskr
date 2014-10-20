@@ -28,13 +28,13 @@ open_notebook <- function(rmdFile = NULL){
     options(NOTEBOOK_TO_OPEN = normalizePath(rmdFile))
     on.exit(options(NOTEBOOK_TO_OPEN = NULL))
   }
-  options(rcharts.mode = 'inline')
-  on.exit(options(rcharts.mode = NULL))
+  options(rmapskr.mode = 'inline')
+  on.exit(options(rmapskr.mode = NULL))
   app <- system.file('apps', 'notebook', package = 'rMapskr')
   shiny::runApp(app)
 }
 
-add_rCharts <- function(libs){
+add_rMapsr <- function(libs){
   LIBS <- lapply(libs, get_lib)
   invisible(lapply(LIBS, function(LIB){
     suppressMessages(singleton(addResourcePath(LIB$name, LIB$url)))
@@ -42,7 +42,7 @@ add_rCharts <- function(libs){
   return(NULL)
 }
 
-get_rCharts_assets <- function(lib){
+get_rMapskr_assets <- function(lib){
   LIB <- get_lib(lib)
   assets = get_assets_shiny(LIB)
   assets[!grepl('jquery', assets)]
@@ -247,7 +247,7 @@ htmlspecialchars <- function(string) {
 
 add_style_ = function(width, height){
   style = sprintf("<style>
-  .rChart {
+  .rMapskr {
     display: block;
     margin-left: auto; 
     margin-right: auto;
