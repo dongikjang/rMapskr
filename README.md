@@ -58,7 +58,7 @@ map3
 ![leaflet](screenshots/leaflet.png)
 
 #### Demo
-See <https://github.com/dongikjang/rMapskr>
+See <http://dongikjang.github.io/rMapskr/>
 
 
 This work was inspired from <http://ramnathv.github.io/rCharts/>, <https://github.com/tontita/Leaflet.KoreanTmsProviders>, <http://plugins.qgis.org/plugins/tmsforkorea>, <https://github.com/leaflet-extras/leaflet-providers>, and <https://github.com/kartena/Proj4Leaflet>.
