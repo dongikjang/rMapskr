@@ -59,7 +59,7 @@ map3
 
 ![leaflet](screenshots/leaflet.png)
 
-```html
+
   <head>
     <link rel='stylesheet' href='inst/libraries/leaflet/external/leaflet.css'>
     <link rel='stylesheet' href='inst/libraries/leaflet/external/leaflet-rMapskr.css'>
@@ -131,6 +131,6 @@ map3
     }
 	</script>
   </body>
-```
+
 
 This work was inspired from <http://ramnathv.github.io/rCharts/>, <https://github.com/tontita/Leaflet.KoreanTmsProviders>, <http://plugins.qgis.org/plugins/tmsforkorea>, <https://github.com/leaflet-extras/leaflet-providers>, and <https://github.com/kartena/Proj4Leaflet>.
