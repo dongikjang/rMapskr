@@ -105,7 +105,7 @@ Leaflet = setRefClass('Leaflet', contains = 'rMapskr', methods = list(
     skip = c('marker', 'circle', 'addons', 'geoJson', 'kml')
     geoJson = toJSON2(params$geoJson)
     kml = toJSON2(params$kml)
-    params2 <<- params
+    params2 <<- params 
     params$marker <<- lapply(params$marker, function(n) c(list(marker=lapply(n$marker, function(m) formatC(m, format = "fg", digits = 10))), 
                                                            n[which(names(n) !="marker")] ))
     params3 <<- params

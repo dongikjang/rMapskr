@@ -51,7 +51,7 @@ rMapskr = setRefClass('rMapskr', list(params = 'list', lib = 'character',
   },
   addParams = function(...){
     params <<- modifyList(params, list(...))
-  },
+  }, 
   addControls = function(nm, value, values, label = paste("Select ", nm, ":")){
     .self$setTemplate(
       page = 'rChartControls2.html',
