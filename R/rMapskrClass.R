@@ -187,7 +187,7 @@ rMapskr = setRefClass('rMapskr', list(params = 'list', lib = 'character',
         .self$save(file_, cdn = cdn)
         cat(c(
           "<iframe src='", file_, 
-          "' scrolling='no' frameBorder='0' seamless", paste("class='rChart", lib, "'"),
+          "' scrolling='no' frameBorder='0' seamless", paste("class='rMapskr", lib, "'"),
           "id=iframe-", params$dom, "></iframe>",
           "<style>iframe.rMapskr{ width: 100%; height: 400px;}</style>"
         ))
@@ -197,7 +197,7 @@ rMapskr = setRefClass('rMapskr', list(params = 'list', lib = 'character',
       iframesrc = {
         cat(c(
           "<iframe srcdoc='", htmlspecialchars(.self$render(...)),
-          "' scrolling='no' frameBorder='0' seamless class='rChart ", lib, " '",
+          "' scrolling='no' frameBorder='0' seamless class='rMapskr ", lib, " '",
           paste0("id='iframe-", params$dom, "'>"), "</iframe>\n",
           "<style>iframe.rMapskr{ width: 100%; height: 400px;}</style>"
         ))
