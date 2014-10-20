@@ -27,27 +27,21 @@ rMapskr = setRefClass('rMapskr', list(params = 'list', lib = 'character',
     	params$mapOpts <<- list(crs = "L.Proj.CRS.TMS.Naver",
 				                      worldCopyJump = FALSE, 
 		                          continuousWorld = TRUE,
-		                          zoomControl = TRUE,
-				                      center=c(37.566429, 126.977997), 
-                              zoom = 9)
+		                          zoomControl = TRUE)
     } else if(krmap[1] == "vworld"){
 	    templates <<- list(page = 'rMapskr.html', chartDiv = NULL, afterScript = "<script></script>",
       			             script =  file.path(LIB$url, 'layouts', 'chartvworld.html'))
 	    params$mapOpts <<- list(crs = "L.Proj.CRS.TMS.VWorld",
 			                        worldCopyJump = FALSE, 
                               continuousWorld = TRUE,
-                              zoomControl = TRUE,
-                              center=c(37.566429, 126.977997), 
-			                        zoom = 9)
+                              zoomControl = TRUE)
     } else {
     	templates <<- list(page = 'rMapskr.html', chartDiv = NULL, afterScript = "<script></script>",
           			         script =  file.path(LIB$url, 'layouts', 'chartdaum.html'))
     	params$mapOpts <<- list(crs = "L.Proj.CRS.TMS.Daum",
     			                    worldCopyJump = FALSE, 
                               continuousWorld = TRUE,
-                              zoomControl = TRUE,
-    			                    center=c(37.566429, 126.977997), 
-    			                    zoom = 9)
+                              zoomControl = TRUE)
     }
     
     templates$chartDiv <<- "<{{container}} id = '{{ chartId }}' class = 'rChart {{ lib }}'></{{ container}}>"
