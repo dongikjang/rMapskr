@@ -5,6 +5,8 @@ Leaflet = setRefClass('Leaflet', contains = 'rMapskr', methods = list(
     krmap <<- krmap[1]
     #.self$tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png')
     params$addons <<- list(enablePopover = FALSE)
+    params$center <<- c(37.566429, 126.977997)
+    params$zoom <<- 9
   },
   enablePopover = function(e = TRUE){
     params$addons$enablePopover <<- e
@@ -35,7 +37,9 @@ Leaflet = setRefClass('Leaflet', contains = 'rMapskr', methods = list(
     params$addons$fullscreen <<- e
   },
   setView = function(center=c(37.566429, 126.977997), zoom = 9, ...){
-    params <<- c(params, list(center = center, zoom = zoom))
+    #params <<- c(params, list(center = center, zoom = zoom))
+    params$center <<- center
+    params$zoom <<- zoom
   },
   tileLayer = function(urlTemplate, provider = NULL, ...){
     if (!is.null(provider)){
