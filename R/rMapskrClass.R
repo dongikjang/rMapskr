@@ -22,26 +22,32 @@ rMapskr = setRefClass('rMapskr', list(params = 'list', lib = 'character',
     #templates <<- list(page = 'rChart.html', chartDiv = NULL, afterScript = "<script></script>",
     #script =  file.path(LIB$url, 'layouts', 'chartnaver.html'))
     if(krmap[1] == "naver"){
-	templates <<- list(page = 'rMapskr.html', chartDiv = NULL, afterScript = "<script></script>",
-      			   script =  file.path(LIB$url, 'layouts', 'chartnaver.html'))
-	params$mapOpts <<- list(crs = "L.Proj.CRS.TMS.Naver",
-				worldCopyJump = FALSE, 
-		                continuousWorld = TRUE,
-		                zoomControl = TRUE)
+	    templates <<- list(page = 'rMapskr.html', chartDiv = NULL, afterScript = "<script></script>",
+      			             script =  file.path(LIB$url, 'layouts', 'chartnaver.html'))
+    	params$mapOpts <<- list(crs = "L.Proj.CRS.TMS.Naver",
+				                      worldCopyJump = FALSE, 
+		                          continuousWorld = TRUE,
+		                          zoomControl = TRUE,
+				                      center=c(37.566429, 126.977997), 
+                              zoom = 9)
     } else if(krmap[1] == "vworld"){
-	templates <<- list(page = 'rMapskr.html', chartDiv = NULL, afterScript = "<script></script>",
-      			   script =  file.path(LIB$url, 'layouts', 'chartvworld.html'))
-	params$mapOpts <<- list(crs = "L.Proj.CRS.TMS.VWorld",
-			        worldCopyJump = FALSE, 
-                                continuousWorld = TRUE,
-                                zoomControl = TRUE)
+	    templates <<- list(page = 'rMapskr.html', chartDiv = NULL, afterScript = "<script></script>",
+      			             script =  file.path(LIB$url, 'layouts', 'chartvworld.html'))
+	    params$mapOpts <<- list(crs = "L.Proj.CRS.TMS.VWorld",
+			                        worldCopyJump = FALSE, 
+                              continuousWorld = TRUE,
+                              zoomControl = TRUE,
+                              center=c(37.566429, 126.977997), 
+			                        zoom = 9)
     } else {
-	templates <<- list(page = 'rMapskr.html', chartDiv = NULL, afterScript = "<script></script>",
-      			   script =  file.path(LIB$url, 'layouts', 'chartdaum.html'))
-	params$mapOpts <<- list(crs = "L.Proj.CRS.TMS.Daum",
-			        worldCopyJump = FALSE, 
-                                continuousWorld = TRUE,
-                                zoomControl = TRUE)
+    	templates <<- list(page = 'rMapskr.html', chartDiv = NULL, afterScript = "<script></script>",
+          			         script =  file.path(LIB$url, 'layouts', 'chartdaum.html'))
+    	params$mapOpts <<- list(crs = "L.Proj.CRS.TMS.Daum",
+    			                    worldCopyJump = FALSE, 
+                              continuousWorld = TRUE,
+                              zoomControl = TRUE,
+    			                    center=c(37.566429, 126.977997), 
+    			                    zoom = 9)
     }
     
     templates$chartDiv <<- "<{{container}} id = '{{ chartId }}' class = 'rChart {{ lib }}'></{{ container}}>"
