@@ -114,8 +114,8 @@ Leaflet = setRefClass('Leaflet', contains = 'rMapskr', methods = list(
     circle = toChain(params$circle, obj = 'L')
 
     toJSONcrs <- function(params, ...){
-      print(params$center)
-      print(params$zoom)
+      #print(params$center)
+      #print(params$zoom)
       if(is.null(params$center)){
       	params$center <<- c(37.566429, 126.977997)
       }
