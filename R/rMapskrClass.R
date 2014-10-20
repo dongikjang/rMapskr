@@ -44,7 +44,7 @@ rMapskr = setRefClass('rMapskr', list(params = 'list', lib = 'character',
                               zoomControl = TRUE)
     }
     
-    templates$chartDiv <<- "<{{container}} id = '{{ chartId }}' class = 'rChart {{ lib }}'></{{ container}}>"
+    templates$chartDiv <<- "<{{container}} id = '{{ chartId }}' class = 'rMapskr {{ lib }}'></{{ container}}>"
   },
   addAssets = function(...){
     html_assets <<- list(...)
@@ -69,7 +69,7 @@ rMapskr = setRefClass('rMapskr', list(params = 'list', lib = 'character',
     lib <<- lib; LIB <<- get_lib(lib)
     templates <<- modifyList(list(
       page = 'rMapskr.html', 
-      chartDiv = "<{{container}} id = '{{ chartId }}' class = 'rChart {{ lib }}'></{{ container}}>", 
+      chartDiv = "<{{container}} id = '{{ chartId }}' class = 'rMapskr {{ lib }}'></{{ container}}>", 
       #script =  file.path(LIB$url, 'layouts', 'chart.html')
       if(krmap[1] == "naver"){
       	script =  file.path(LIB$url, 'layouts', 'chartnaver.html')
@@ -189,7 +189,7 @@ rMapskr = setRefClass('rMapskr', list(params = 'list', lib = 'character',
           "<iframe src='", file_, 
           "' scrolling='no' frameBorder='0' seamless", paste("class='rChart", lib, "'"),
           "id=iframe-", params$dom, "></iframe>",
-          "<style>iframe.rChart{ width: 100%; height: 400px;}</style>"
+          "<style>iframe.rMapskr{ width: 100%; height: 400px;}</style>"
         ))
         # cat(sprintf("<iframe src=%s seamless></iframe>", file_))
         return(invisible())
@@ -199,7 +199,7 @@ rMapskr = setRefClass('rMapskr', list(params = 'list', lib = 'character',
           "<iframe srcdoc='", htmlspecialchars(.self$render(...)),
           "' scrolling='no' frameBorder='0' seamless class='rChart ", lib, " '",
           paste0("id='iframe-", params$dom, "'>"), "</iframe>\n",
-          "<style>iframe.rChart{ width: 100%; height: 400px;}</style>"
+          "<style>iframe.rMapskr{ width: 100%; height: 400px;}</style>"
         ))
         return(invisible())
       },

@@ -1,5 +1,5 @@
 leaflet:
-  css: [external/leaflet.css, external/leaflet-rCharts.css, external/legend.css]
+  css: [external/leaflet.css, external/leaflet-rMapskr.css, external/legend.css]
   jshead:
     - external/leaflet-src.js
     - lib/proj4-compressed.js
