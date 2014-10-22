@@ -3,15 +3,15 @@
 
   var map = L.map(spec.dom, spec.mapOpts)
   var baseLayers = {
-	'VWorld Street Map': L.Proj.TileLayer.TMS.provider('VWorld.Street'),
-	'VWorld Satellite Map' : L.Proj.TileLayer.TMS.provider('VWorld.Satellite').addTo(map),
+	'VWorld Street Map': L.tileLayer.TMS.provider('VWorld.Street'),
+	'VWorld Satellite Map' : L.tileLayer.TMS.provider('VWorld.Satellite').addTo(map),
 	'OpenStreetMap German Style': L.tileLayer.provider('OpenStreetMap.DE'),
 	'OpenStreetMap Black and White': L.tileLayer.provider('OpenStreetMap.BlackAndWhite'),
 	'Esri WorldStreetMap': L.tileLayer.provider('Esri.WorldStreetMap'),
   };
 
   var overlayLayers = {
-	'VWorld Hybrid Map' : L.Proj.TileLayer.TMS.provider('VWorld.Hybrid').addTo(map),
+	'VWorld Hybrid Map' : L.tileLayer.TMS.provider('VWorld.Hybrid').addTo(map),
 	'OpenSeaMap': L.tileLayer.provider('OpenSeaMap'),
 	'OpenWeatherMap Clouds': L.tileLayer.provider('OpenWeatherMap.Clouds'),
 	'OpenWeatherMap CloudsClassic': L.tileLayer.provider('OpenWeatherMap.CloudsClassic'),
