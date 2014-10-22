@@ -20,7 +20,7 @@ Leaflet = setRefClass('Leaflet', contains = 'rMapskr', methods = list(
                             zoomControl = TRUE)
     } else if(krmap == "vworld") {
     	params$mapOpts <<- list(..., 
-			    crs = "L.Proj.CRS.TMS.VWorld",
+			    #crs = "L.Proj.CRS.TMS.VWorld",
 			    worldCopyJump = worldCopyJump, 
                             continuousWorld = TRUE,
                             zoomControl = TRUE)
