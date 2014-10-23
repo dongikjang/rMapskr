@@ -6,7 +6,12 @@ Leaflet = setRefClass('Leaflet', contains = 'rMapskr', methods = list(
     #.self$tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png')
     params$addons <<- list(enablePopover = FALSE)
     params$center <<- c(37.566429, 126.977997)
-    params$zoom <<- 9
+    if(krmap[1] == "vworld"){
+    	params$zoom <<- 12
+    } else {
+    	params$zoom <<- 9
+    }
+    
   },
   enablePopover = function(e = TRUE){
     params$addons$enablePopover <<- e
