@@ -31,7 +31,7 @@ rMapskr = setRefClass('rMapskr', list(params = 'list', lib = 'character',
     } else if(krmap[1] == "vworld"){
 	    templates <<- list(page = 'rMapskr.html', chartDiv = NULL, afterScript = "<script></script>",
       			             script =  file.path(LIB$url, 'layouts', 'chartvworld.html'))
-	    params$mapOpts <<- list(crs = "L.Proj.CRS.TMS.VWorld",
+	    params$mapOpts <<- list(#crs = "L.Proj.CRS.TMS.VWorld",
 			                        worldCopyJump = FALSE, 
                               continuousWorld = TRUE,
                               zoomControl = TRUE)
