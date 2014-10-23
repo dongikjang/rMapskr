@@ -7,7 +7,7 @@ Leaflet = setRefClass('Leaflet', contains = 'rMapskr', methods = list(
     params$addons <<- list(enablePopover = FALSE)
     params$center <<- c(37.566429, 126.977997)
     if(krmap[1] == "vworld"){
-    	params$zoom <<- 12
+    	params$zoom <<- 13
     } else {
     	params$zoom <<- 9
     }
